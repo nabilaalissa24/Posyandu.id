@@ -6,7 +6,6 @@
 </head>
 <body>
 	
-
 	<div class="pertama" style="background-image: url('assets/pictures/bg.jpg');">
 		<div class="logo">
 			<img src="assets/pictures/logonew6.png">

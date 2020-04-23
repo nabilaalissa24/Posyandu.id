@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<?php 
+    $data = $this->M_profile_ih->getProfile($_SESSION['username']); 
+?>
 <head>
 	<title>Ibu Hamil | Posyandu</title>
 	<meta charset="utf-8">
@@ -29,38 +32,48 @@
     <div>
         <div class="col-lg-1"></div>
       	<div class="col-lg-5 col-isi">
-        	<form>
+        	<form action="<?php echo site_url('C_profile_ih/edit')?>" method ='post'>
+             <?php if(isset($error_message)) { ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $error_message ?>
+                        </div>
+            <?php } ?>
+            <?php if(isset($success)) { ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= $success ?>
+                        </div>
+            <?php } ?>
           	<div class="form-group">
             	<label for="formGroupExampleInput">ID Registrasi</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput" disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="id" value="<?= $data['id_registrasi']?>" disabled>
           	</div>
           	<div class="form-group">
             	<label for="formGroupExampleInput">Nama</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput" disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="nama" value="<?= $data['nama']?>">
           	</div>
           	<div class="form-group">
             	<label for="exampleFormControlInput1">Username</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput" disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="username" value="<?= $data['username']?>"disabled>
           	</div>
           	<div class="form-group">
             	<label for="inputPassword">Password</label>
-              	<input type="password" class="form-control" id="inputPassword" disabled>
+              	<input type="text" class="form-control" id="inputPassword" name ="password" value="<?= $data['password']?>"disabled>
           	</div>
           	<div class="form-group">
             	<label for="exampleFormControlTextarea1">Alamat</label>
-            	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled></textarea>
+            	<input class="form-control" id="exampleFormControlTextarea1" name ="alamat" rows="3" value="<?= $data['alamat']?>"></input>
           	</div>
           	<div class="form-group">
             	<label for="formGroupExampleInput">TTL</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput"  disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="ttl" value="<?= $data['ttl']?>">
           	</div>
           	<div class="form-group">
             	<label for="formGroupExampleInput">Kehamilan Ke-</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput" disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="kehamilan_ke" value="<?= $data['kehamilan_ke']?>">
           	</div>
           	<div class="form-group">
             	<label for="formGroupExampleInput">No. Telepon</label>
-            	<input type="text" class="form-control" id="formGroupExampleInput" disabled>
+            	<input type="text" class="form-control" id="formGroupExampleInput" name ="no_telp" value="<?= $data['no_telp']?>">
           	</div>
             <button type="submit" class="btn btn-primary">Edit</button>
         	</form>

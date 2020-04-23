@@ -44,15 +44,22 @@
             </tr>
             </thead>
             <tbody>
+            <?php
+                $i=1;
+                foreach ($profile_catatanpemenuhangizi as $pcpg) {
+            ?>
             <tr bgcolor="#F8F9F9">
-                <th scope="row">1</th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
+                <th scope="row"><?php echo($i++)?></th>
+                <th scope="row"><?php echo $pcpg['tanggal']?></th>
+                <th scope="row"><?php echo $pcpg['nama_petugas']?></th>
+                <th scope="row"><?php echo $pcpg['umur']?></th>
+                <th scope="row"><?php echo $pcpg['vitamin']?></th>
+                <th scope="row"><?php echo $pcpg['nasihat']?></th>
             </tr>
             </tbody>
+            <?php 
+                }
+            ?>
             </table>
     </div>
     </div>

@@ -42,13 +42,20 @@
             </tr>
             </thead>
             <tbody>
+            <?php
+                $i=1;
+                foreach ($profile_catatanimunisasi as $pci) {
+            ?>
             <tr bgcolor="#F8F9F9">
-                <th scope="row">1</th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
+                <th scope="row"><?php echo ($i++)?></th>
+                <th scope="row"><?php echo $pci['tanggal']?></th>
+                <th scope="row"><?php echo $pci['nama_petugas']?></th>
+                <th scope="row"><?php echo $pci['umur']?></th>
+                <th scope="row"><?php echo $pci['vaksin']?></th>
             </tr>
+            <?php 
+                }
+            ?>
             </tbody>
             </table>
     </div>

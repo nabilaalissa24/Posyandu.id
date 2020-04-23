@@ -15,7 +15,7 @@ class C_userLogin extends CI_Controller {
         $this->load->view('user-login');
     }
 
-    public function aksi_login(){
+    public function aksi_login() {
         $data['username'] = $this->input->post('username');
    		$data['password'] = $this->input->post('password');
 		 

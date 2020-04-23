@@ -50,21 +50,28 @@
             </tr>
             </thead>
             <tbody>
+            <?php
+                $i=1;
+                foreach ($profile_catatankesehatan as $pck) {
+            ?>
             <tr bgcolor="#F8F9F9">
-                <th scope="row">1</th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
-                <th scope="row"></th>
+                <th scope="row"><?php echo $i++?></th>
+                <th scope="row"><?php echo $pck['tanggal_pemeriksaan']?></th>
+                <th scope="row"><?php echo $pck['nama_petugas'];?></th>
+                <th scope="row"><?php echo $pck['keluhan'];?></th>
+                <th scope="row"><?php echo $pck['berat'];?></th>
+                <th scope="row"><?php echo $pck['umur'];?></th>
+                <th scope="row"><?php echo $pck['tinggi'];?></th>
+                <th scope="row"><?php echo $pck['letak'];?></th>
+                <th scope="row"><?php echo $pck['denyut'];?></th>
+                <th scope="row"><?php echo $pck['kaki'];?></th>
+                <th scope="row"><?php echo $pck['hasil'];?></th>
+                <th scope="row"><?php echo $pck['nasihat'];?></th>
+                <th scope="row"><?php echo $pck['kapan'];?></th>
             </tr>
+            <?php 
+                } 
+            ?>
             </tbody>
             </table>
     </div>
