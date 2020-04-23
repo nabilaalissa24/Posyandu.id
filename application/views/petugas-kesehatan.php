@@ -8,15 +8,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/petugaskesehatan-style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/petugaskesehatan-style.css">
     <script type="text/javascript" src="assets/js/menu.js"></script>
   
 </head>
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <?php include 'navbar-PK.php'; ?>
 
   <!-- AKHIR SEYENK -->
 
@@ -24,7 +21,7 @@
   <nav class="navbar">
       <div class="collapse navbar-collapse">
           <span class="col text-center text-light">
-              <img class="bg-PK" src="assets/pictures/bgPK.png">
+              <img class="bg-PK" src="<?php echo base_url()?>assets/pictures/bgPK.png">
           </span>
         </div>
       </div>

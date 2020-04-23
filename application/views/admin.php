@@ -8,8 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
-    <script type="text/javascript" src="assets/js/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/admin.css">
+    <script type="text/javascript" src="<?php echo base_url()?>assets/js/menu.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -18,7 +18,7 @@
 
   <!-- NAVBAR -->
     <div class="topnav" id="myTopnav">
-        <img src="assets/pictures/logonew6.png" class="img-logo">
+        <img src="<?php echo base_url()?>assets/pictures/logonew6.png" class="img-logo">
         <a href="#home"><b>Log Out</a>
         <a href="#news">Akun Ibu Hamil</a>
         <a href="#contact">Akun Petugas Kesehatan</a>
@@ -32,7 +32,7 @@
   <nav class="navbar">
       <div class="collapse navbar-collapse">
           <span class="col text-center text-light">
-              <img class="bg-admin" src="assets/pictures/admin.png">
+              <img class="bg-admin" src="<?php echo base_url()?>assets/pictures/admin.png">
           </span>
         </div>
       </div>

@@ -9,5 +9,11 @@ class M_userlogin extends CI_Model {
 			return false;
 		}
     }
+
+    public function getProfile($username) {
+		$this->db->where('username', $username);
+        $query = $this->db->get('user');
+        return $query->row_array();
+    }
 }
 ?>

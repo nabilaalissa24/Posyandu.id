@@ -9,8 +9,8 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  	<link rel="stylesheet" type="text/css" href="assets/css/navbar_menu.css">
-  	<script type="text/javascript" src="assets/js/menu.js"></script>
+  	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/navbar_menu.css">
+  	<script type="text/javascript" src="<?php echo base_url()?>assets/js/menu.js"></script>
   
 </head>
 </head>
@@ -18,9 +18,9 @@
 	
 		<nav>
     <div class="topnav">
-	     <img src="assets/pictures/logonew6.png" alt="" class="img-logo">
+	     <img src=<?php echo base_url()?>"assets/pictures/logonew6.png" alt="" class="img-logo">
 	     <ul>
-		      <li><a href="<?= base_url().'C_profile_ih'?>">Profile</a></li>
+		      <li><a href="<?= base_url('C_profile_ih')?>">Profile</a></li>
 		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Lihat Data Ibu Hamil
         	<span class="caret"></span></a>
         		<ul class="dropdown-menu" role="menu">
